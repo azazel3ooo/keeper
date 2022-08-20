@@ -2,6 +2,7 @@ package client_logic
 
 import (
 	"fmt"
+
 	"github.com/azazel3ooo/keeper/internal/models"
 	"github.com/google/uuid"
 )

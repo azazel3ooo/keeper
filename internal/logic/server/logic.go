@@ -1,9 +1,10 @@
 package server_logic
 
 import (
+	"time"
+
 	"github.com/azazel3ooo/keeper/internal/models"
 	"github.com/golang-jwt/jwt"
-	"time"
 )
 
 const JWTSalt = "super_secret_salt"

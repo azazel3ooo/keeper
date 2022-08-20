@@ -1,14 +1,15 @@
 package client_repo
 
 import (
+	"net/http"
+	"testing"
+
 	server_logic "github.com/azazel3ooo/keeper/internal/logic/server"
 	"github.com/azazel3ooo/keeper/internal/models"
 	"github.com/azazel3ooo/keeper/internal/models/server_repo"
 	"github.com/azazel3ooo/keeper/internal/models/testing_repos_client"
 	"github.com/azazel3ooo/keeper/internal/models/testing_repos_server"
 	"github.com/stretchr/testify/assert"
-	"net/http"
-	"testing"
 )
 
 func TestClient_ActionToServer(t *testing.T) {

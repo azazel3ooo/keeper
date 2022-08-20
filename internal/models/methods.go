@@ -2,8 +2,9 @@ package models
 
 import (
 	"bytes"
-	"gopkg.in/yaml.v2"
 	"os"
+
+	"gopkg.in/yaml.v2"
 )
 
 // RegAddr возвращает адрес для хендлера регистрации

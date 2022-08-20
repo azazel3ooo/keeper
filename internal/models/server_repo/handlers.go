@@ -2,13 +2,13 @@ package server_repo
 
 import (
 	"errors"
-	logic "github.com/azazel3ooo/keeper/internal/logic/server"
-	"github.com/azazel3ooo/keeper/internal/models"
-	"github.com/gofiber/fiber/v2"
 	"log"
 	"net/http"
 
 	_ "github.com/azazel3ooo/keeper/docs"
+	logic "github.com/azazel3ooo/keeper/internal/logic/server"
+	"github.com/azazel3ooo/keeper/internal/models"
+	"github.com/gofiber/fiber/v2"
 )
 
 // registration godoc

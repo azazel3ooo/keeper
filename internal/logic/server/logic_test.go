@@ -1,11 +1,12 @@
 package server_logic
 
 import (
+	"log"
+	"testing"
+
 	"github.com/azazel3ooo/keeper/internal/models"
 	"github.com/azazel3ooo/keeper/internal/models/testing_repos_server"
 	"github.com/stretchr/testify/assert"
-	"log"
-	"testing"
 )
 
 func TestCheckToken(t *testing.T) {

@@ -1,13 +1,14 @@
 package server_repo
 
 import (
+	"net/http"
+
 	"github.com/azazel3ooo/keeper/internal/models"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/recover"
 	fiberSwagger "github.com/swaggo/fiber-swagger"
-	"net/http"
 )
 
 // SetupApp производит настройку fiber.App и инициализирует хендлеры

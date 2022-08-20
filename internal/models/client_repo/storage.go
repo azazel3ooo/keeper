@@ -2,11 +2,12 @@ package client_repo
 
 import (
 	"database/sql"
-	"github.com/azazel3ooo/keeper/internal/models"
-	_ "github.com/mattn/go-sqlite3"
 	"log"
 	"os"
 	"path/filepath"
+
+	"github.com/azazel3ooo/keeper/internal/models"
+	_ "github.com/mattn/go-sqlite3"
 )
 
 type ClientStorage struct {

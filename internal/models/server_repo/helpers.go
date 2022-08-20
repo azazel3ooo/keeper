@@ -1,10 +1,11 @@
 package server_repo
 
 import (
-	logic "github.com/azazel3ooo/keeper/internal/logic/server"
-	"github.com/azazel3ooo/keeper/internal/models"
 	"log"
 	"sync"
+
+	logic "github.com/azazel3ooo/keeper/internal/logic/server"
+	"github.com/azazel3ooo/keeper/internal/models"
 )
 
 // ProcessingWatcher итерируется по каналу сервера. Вызывает необходимые методы хранилища (обновление, удаление...)

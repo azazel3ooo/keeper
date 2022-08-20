@@ -1,10 +1,11 @@
 package server
 
 import (
-	"github.com/azazel3ooo/keeper/internal/models"
-	repo "github.com/azazel3ooo/keeper/internal/models/server_repo"
 	"log"
 	"sync"
+
+	"github.com/azazel3ooo/keeper/internal/models"
+	repo "github.com/azazel3ooo/keeper/internal/models/server_repo"
 )
 
 // Start производит инициализацию сервера и запускает его на порту, указанном в конфигурационном файле

@@ -4,10 +4,11 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"github.com/azazel3ooo/keeper/internal/models"
 	"io"
 	"log"
 	"net/http"
+
+	"github.com/azazel3ooo/keeper/internal/models"
 )
 
 // GetToken производит авторизацию\регистрацию пользователя и обновляет токен клиента

@@ -2,13 +2,14 @@ package server_repo
 
 import (
 	"bytes"
-	logic "github.com/azazel3ooo/keeper/internal/logic/server"
-	"github.com/azazel3ooo/keeper/internal/models/testing_repos_server"
-	"github.com/stretchr/testify/assert"
 	"log"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	logic "github.com/azazel3ooo/keeper/internal/logic/server"
+	"github.com/azazel3ooo/keeper/internal/models/testing_repos_server"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestServer_registration(t *testing.T) {

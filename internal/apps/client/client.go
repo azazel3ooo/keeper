@@ -3,11 +3,12 @@ package client
 import (
 	"errors"
 	"fmt"
+	"log"
+	"net/http"
+
 	logic "github.com/azazel3ooo/keeper/internal/logic/client"
 	"github.com/azazel3ooo/keeper/internal/models"
 	repo "github.com/azazel3ooo/keeper/internal/models/client_repo"
-	"log"
-	"net/http"
 )
 
 const BuildVersion = "v0.0.1"

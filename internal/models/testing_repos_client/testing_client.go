@@ -1,8 +1,9 @@
 package testing_repos_client
 
 import (
-	"github.com/azazel3ooo/keeper/internal/models/server_repo"
 	"net/http"
+
+	"github.com/azazel3ooo/keeper/internal/models/server_repo"
 )
 
 // TestingClient имитация http.Client для тестирования клиента
