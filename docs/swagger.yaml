@@ -1,0 +1,225 @@
+basePath: /
+definitions:
+  models.DeleteRequest:
+    properties:
+      id:
+        type: string
+    type: object
+  models.UserData:
+    properties:
+      data:
+        type: string
+      id:
+        type: string
+      metadata:
+        type: string
+    type: object
+  models.UserDataResponse:
+    properties:
+      data:
+        items:
+          $ref: '#/definitions/models.UserData'
+        type: array
+    type: object
+  models.UserRequest:
+    properties:
+      login:
+        type: string
+      password:
+        type: string
+    type: object
+  models.UserResponse:
+    properties:
+      token:
+        type: string
+    type: object
+info:
+  contact:
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a image processing server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Keeper server
+  version: 0.0.1
+paths:
+  /api/v1/auth:
+    post:
+      consumes:
+      - application/json
+      description: handler for authorization
+      parameters:
+      - description: Request structure
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.UserResponse'
+        "400":
+          description: Bad Request
+        "403":
+          description: Forbidden
+        "500":
+          description: Internal Server Error
+      tags:
+      - All
+  /api/v1/items:
+    delete:
+      consumes:
+      - application/json
+      description: handler for delete exist data in global storage
+      parameters:
+      - default: <Add access token here>
+        description: Insert your access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Request structure
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.DeleteRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "500":
+          description: Internal Server Error
+      tags:
+      - Auth
+    get:
+      consumes:
+      - application/json
+      description: handler for get full list of user data
+      parameters:
+      - default: <Add access token here>
+        description: Insert your access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.UserDataResponse'
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "500":
+          description: Internal Server Error
+      tags:
+      - Auth
+    patch:
+      consumes:
+      - application/json
+      description: handler for update exist data in global storage
+      parameters:
+      - default: <Add access token here>
+        description: Insert your access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Request structure
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "500":
+          description: Internal Server Error
+      tags:
+      - Auth
+    post:
+      consumes:
+      - application/json
+      description: handler for set new data in global storage
+      parameters:
+      - default: <Add access token here>
+        description: Insert your access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Request structure
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "500":
+          description: Internal Server Error
+      tags:
+      - Auth
+  /api/v1/registration:
+    post:
+      consumes:
+      - application/json
+      description: handler for registration
+      parameters:
+      - description: Request structure
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.UserResponse'
+        "400":
+          description: Bad Request
+        "409":
+          description: Conflict
+        "500":
+          description: Internal Server Error
+      tags:
+      - All
+swagger: "2.0"
